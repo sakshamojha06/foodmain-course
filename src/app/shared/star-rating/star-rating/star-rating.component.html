@@ -1,0 +1,13 @@
+<div class="star-container">
+    <ng-container *ngFor="let star of [].constructor(maxStars); let i = index">
+      <span
+        class="star"
+        [class.filled]="isFilled(i)"
+        (click)="setRating(i)"
+        (mouseenter)="setHover(i)"
+        (mouseleave)="clearHover()"
+      >
+        ★
+      </span>
+    </ng-container>
+  </div>
